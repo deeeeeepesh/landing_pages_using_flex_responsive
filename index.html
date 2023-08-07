@@ -1,0 +1,815 @@
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <style>
+        * {
+
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            box-sizing: border-box;
+            color: darkolivegreen;
+
+        }
+
+        body {
+
+            width: 100%;
+            margin: 0;
+
+        }
+
+        .padd {
+            padding: 0 12%;
+        }
+
+        .minihead {
+            background-color: darkolivegreen;
+            display: flex;
+            flex-wrap: nowrap;
+            flex-direction: row;
+            flex: 0 0 50%;
+            text-decoration: none;
+            color: white;
+            height: 20px;
+            justify-content: space-between;
+            border-bottom: 2px solid goldenrod;
+        }
+
+        .minihead div a {
+            background-color: darkolivegreen;
+            text-decoration: none;
+            color: white;
+            flex-basis: 40%;
+        }
+
+        .head {
+            background-color: greenyellow;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            height: 100px;
+            justify-content: space-between;
+            align-items: center;
+
+        }
+
+        .headlogo img {
+            flex: 0 0 30%;
+            height: 100px;
+
+
+        }
+
+        .headmenu {
+            color: darkolivegreen;
+            flex-basis: 60%;
+
+        }
+
+        .headmenu a {
+            padding: 4%;
+            color: darkolivegreen;
+            text-decoration: none;
+
+
+
+        }
+
+        .headmenu a:hover {
+            color: white;
+            background-color: darkolivegreen;
+            border-radius: 15%;
+
+
+        }
+
+        .bod {
+            background-image: url(images/trees.jpg);
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-content: center;
+            height: 600px;
+
+        }
+
+        .bodbut1,
+        .bodbut2,
+        .bodbut3 {
+            flex-basis: 30%;
+            background-color: rgba(255, 255, 255, 0.7);
+            height: 400px;
+
+        }
+
+        .bodbut1 h2,
+        .bodbut2 h2,
+        .bodbut3 h2 {
+            color: greenyellow;
+            background-color: rgba(128, 128, 128, 0.5);
+            height: 100px;
+            margin: 0;
+            text-align: center;
+            padding: 10%;
+
+
+        }
+
+        .bodbut1 div,
+        .bodbut2 div,
+        .bodbut3 div {
+            color: darkolivegreen;
+            background-color: rgba(128, 128, 128, 0);
+            height: 250px;
+            margin: 0;
+            padding: 30px;
+            text-align: center;
+
+
+        }
+
+        .bodbut1 button,
+        .bodbut2 button,
+        .bodbut3 button {
+            height: 50px;
+            background-color: greenyellow;
+            color: white;
+            width: 100%;
+            border: 0;
+            font-size: 15pt;
+
+        }
+
+        .bodmain,
+        .lwrmain {
+            display: flex;
+            flex-wrap: nowrap;
+            flex-direction: row;
+            height: 600px;
+            justify-content: space-between;
+            width: 100%;
+
+        }
+
+        .lwrmain {
+            height: 300px;
+        }
+
+        .bodsub {
+            flex: 0 0 48%;
+        }
+
+        .subimg1 {
+            width: 100%;
+            height: 400px;
+            background-image: url(images/clover.jpg);
+            background-repeat: no-repeat;
+            display: flex;
+
+        }
+
+        .subimg1text {
+            background-color: rgba(222, 184, 135, 0.5);
+            height: 100px;
+            width: 100%;
+            align-self: flex-end;
+            text-align: center;
+        }
+
+        .subsub {
+            width: 100%;
+            height: 125px;
+            text-align: left;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+        }
+
+        .subsub img {
+            height: 110px;
+            width: 110px;
+            padding: 7px;
+            border: 1px solid gray;
+        }
+
+        .subsub h3,
+        .subimg1text h3 {
+            margin: 0;
+
+        }
+
+        .subsubsub {
+            display: flex;
+            flex-direction: column;
+            margin-left: 5px;
+
+        }
+
+        .subsubsub button {
+            height: 20px;
+            width: 100px;
+            border-color: greenyellow;
+            color: greenyellow;
+            font-weight: 400;
+        }
+
+        .lwrbod {
+            text-align: center;
+            color: darkolivegreen;
+            margin-bottom: 0;
+        }
+
+        .lwrmenu {
+            margin-top: 40px;
+            display: flex;
+            flex-direction: row;
+            height: 120px;
+            width: 100%;
+            background-color: orange;
+
+        }
+
+        .foot {
+            width: 100%;
+            height: 250px;
+            background-color: darkolivegreen;
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+
+        }
+
+        .footsec1 {
+            flex-basis: 45%;
+
+        }
+
+        .footsec1 h4 {
+            color: white;
+            padding-top: 20px;
+            border-bottom: 2px grey solid;
+        }
+
+        .footsec1 div {
+            color: white;
+        }
+
+        .footsec2 {
+            flex-basis: 23%;
+
+        }
+
+        .footsec2 h4 {
+            color: white;
+            padding-top: 20px;
+            border-bottom: 2px grey solid;
+        }
+
+        .footsec2 ul li a {
+            padding-top: 7px;
+            text-decoration: none;
+            color: greenyellow;
+            font-size: 10pt;
+        }
+
+        .footsec2 ul li {
+            padding-top: 5px;
+        }
+
+        .footsec3 {
+            flex-basis: 23%;
+
+        }
+
+        .footsec3 h4 {
+            color: white;
+            padding-top: 20px;
+            border-bottom: 2px grey solid;
+        }
+
+        .icon {
+            width: 180px;
+            height: 30px;
+            background-color: white;
+            margin-top: 50px;
+        }
+
+        @media only screen and (max-width:500px) {
+            * {
+
+                font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                box-sizing: border-box;
+                color: darkolivegreen;
+
+            }
+
+            body {
+
+                width: 100%;
+                margin: 0;
+
+            }
+
+            .padd {
+                padding: 0 7%;
+            }
+
+            .minihead {
+                background-color: greenyellow;
+                height: 50px;
+                display: flex;
+                flex-wrap: wrap;
+                flex-direction: row;
+                width: 100%;
+                flex: 0 0 50%;
+                text-decoration: none;
+                color: white;
+                border-bottom: 2px solid goldenrod;
+                justify-content: center;
+            }
+
+            .minihead .links {
+                background-color: greenyellow;
+                text-decoration: none;
+                color: white;
+                display: flex;
+                flex-direction: column;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                flex-basis: 100%;
+                flex-wrap: wrap;
+                height: 20px;
+            }
+
+            .minihead div a {
+                background-color: greenyellow;
+                text-decoration: none;
+                color: white;
+                flex-basis: 40%;
+            }
+
+            .head {
+                background-color: darkolivegreen;
+                display: flex;
+                flex-direction: column;
+                flex-wrap: nowrap;
+                height: 150px;
+                justify-content: space-between;
+                align-items: center;
+
+            }
+
+            .headlogo img {
+                flex: 0 0 100%;
+                height: 100px;
+
+
+            }
+
+            .headmenu {
+                color: white;
+                flex-basis: 100%;
+                justify-content: space-around;
+
+            }
+
+            .headmenu a {
+                padding: 2%;
+                color:greenyellow;
+                text-decoration: none;
+            }
+            .hide
+            {
+                display: none;
+            }
+
+            .headmenu a:hover {
+                color: white;
+                background-color: gold;
+                border-radius: 15%;
+
+
+            }
+
+            .bod {
+                background-image: url(images/trees.jpg);
+                display: flex;
+                flex-direction: column;
+                flex-wrap: nowrap;
+                justify-content: space-evenly;
+                align-content: center;
+                height: 1300px;
+
+            }
+
+            .bodbut1,
+            .bodbut2,
+            .bodbut3 {
+                flex-basis: 30%;
+                background-color: rgba(255, 255, 255, 0.7);
+                height: 400px;
+
+            }
+
+            .bodbut1 h2,
+            .bodbut2 h2,
+            .bodbut3 h2 {
+                color: greenyellow;
+                background-color: rgba(128, 128, 128, 0.5);
+                height: 100px;
+                margin: 0;
+                text-align: center;
+                padding: 10%;
+
+
+            }
+
+            .bodbut1 div,
+            .bodbut2 div,
+            .bodbut3 div {
+                color: darkolivegreen;
+                background-color: rgba(128, 128, 128, 0);
+                height: 250px;
+                margin: 0;
+                padding: 30px;
+                text-align: center;
+
+
+            }
+
+            .bodbut1 button,
+            .bodbut2 button,
+            .bodbut3 button {
+                height: 50px;
+                background-color: greenyellow;
+                color: white;
+                width: 100%;
+                border: 0;
+                font-size: 15pt;
+
+            }
+
+            .bodmain {
+                display: flex;
+                flex-wrap: nowrap;
+                flex-direction: column;
+                height: 1200px;
+                justify-content: space-around;
+                width: 100%;
+                text-align: center;
+
+            }
+
+            .lwrmain {
+                height: 300px;
+            }
+
+            .bodsub {
+                flex: 0 0 48%;
+            }
+
+            .subimg1 {
+                width: 100%;
+                height: 400px;
+                background-image: url(images/clover.jpg);
+                background-repeat: no-repeat;
+                display: flex;
+
+            }
+
+            .subimg1text {
+                background-color: rgba(222, 184, 135, 0.5);
+                height: 100px;
+                width: 100%;
+                align-self: flex-end;
+                text-align: center;
+            }
+
+            .subsub {
+                width: 100%;
+                height: 125px;
+                text-align: left;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: nowrap;
+            }
+
+            .subsub img {
+                height: 110px;
+                width: 110px;
+                padding: 7px;
+                border: 1px solid gray;
+            }
+
+            .subsub h3,
+            .subimg1text h3 {
+                margin: 0;
+
+            }
+
+            .subsubsub {
+                display: flex;
+                flex-direction: column;
+                margin-left: 5px;
+
+            }
+
+            .subsubsub button {
+                height: 20px;
+                width: 100px;
+                border-color: greenyellow;
+                color: greenyellow;
+                font-weight: 400;
+            }
+
+            .lwrmain {
+                display: flex;
+                flex-wrap: nowrap;
+                flex-direction: column;
+                height: 400px;
+                justify-content: space-between;
+                width: 100%;
+
+            }
+
+            .lwrbod {
+                text-align: center;
+                color: darkolivegreen;
+                margin-bottom: 0;
+                border: 1 solid blue;
+            }
+
+            .lwrmenu {
+                margin-top: 40px;
+                display: flex;
+                flex-direction: row;
+                height: 120px;
+                width: 100%;
+                background-color: orange;
+
+            }
+
+            .foot {
+                width: 100%;
+                height: 650px;
+                background-color: darkolivegreen;
+                display: flex;
+                flex-wrap: nowrap;
+                flex-direction: column;
+                justify-content: space-evenly;
+
+            }
+
+            .footsec1 {
+                flex-basis: 20%;
+                text-align: center;
+
+            }
+
+            .footsec1 h4 {
+                color: white;
+                padding-top: 0px;
+                border-bottom: 2px grey solid;
+            }
+
+            .footsec1 div {
+                color: white;
+            }
+
+            .footsec2 {
+                flex-basis: 10%;
+                text-align: center;
+
+            }
+
+            .footsec2 ul {
+                padding: 0;
+                margin: 0;
+            }
+
+            .footsec2 h4 {
+                color: white;
+                padding-top: 0px;
+                border-bottom: 2px grey solid;
+            }
+
+            .footsec2 ul li a {
+                padding-top: 7px;
+                text-decoration: none;
+                color: greenyellow;
+                font-size: 10pt;
+            }
+
+            .footsec2 ul li {
+                padding-top: 5px;
+            }
+
+            .footsec3 {
+                flex-basis: 20%;
+                text-align: center;
+
+            }
+
+            .footsec3 h4 {
+                color: white;
+                padding-top: 0px;
+                border-bottom: 2px grey solid;
+            }
+
+            .icon {
+                width: 100%;
+                height: 30px;
+                background-color: white;
+                margin: auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="minihead padd">
+        <div class="links">
+            <a href="#">LINK 1</a>|
+            <a href="#">LINK 2</a>|
+            <a href="#">LINK 3</a>|
+            <a href="#">LINK 4</a>|
+            <a href="#">LINK 5</a>
+        </div>
+        <div class="mail">
+            <a href="mailto:deepeshdevasekr@gmail.com">deepeshdevasekr@gmail.com</a>
+            <a href="tel:9710142960">|9710142960</a>
+        </div>
+    </div>
+
+    <div class="head padd">
+        <div class="headlogo"><img src="images/phonerrlogo.png"> </div>
+        <div class="headmenu">
+            <a href="#">MENU</a>
+            <a href="#">PAGES</a>
+            <a href="#">DROPDOWN</a>
+            <a href="#">TEXTLINK</a>
+            <a class="hide" href="#">TEXTLINK</a>
+        </div>
+    </div>
+    <div class="bod padd">
+        <div class="bodbut1">
+            <h2>
+                ghfghkhj gghhjb hkhkgh kjkjjkjkh
+            </h2>
+            <div>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, accusantium perspiciatis voluptatibus in
+                corrupti
+            </div>
+            <button>READ MOREE>> </button>
+        </div>
+        <div class="bodbut2">
+            <h2>
+                ghfghkhj gghhjb hkhkgh kjkjjkjkh
+            </h2>
+            <div>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, accusantium perspiciatis voluptatibus in
+                corrupti
+            </div>
+            <button>READ MOREE>> </button>
+        </div>
+        <div class="bodbut3">
+            <h2>
+                ghfghkhj gghhjb hkhkgh kjkjjkjkh
+            </h2>
+            <div>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, accusantium perspiciatis voluptatibus in
+                corrupti
+            </div>
+            <button>READ MOREE>> </button>
+        </div>
+    </div>
+    <div class="padd bodmain">
+        <div class="bodsub">
+            <h2>Lorem ipsum dolor sit amet elit. Autem provident a repudiandae consectetur corpo </h2>
+            <div class="subimg1">
+                <div class="subimg1text">
+                    <h3>loresm ippusumu</h3>
+                    <div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta sit nobis unde? Sit quam nece
+                    </div>
+                    <button style="background-color: rgba(128, 128, 128, 0);">READ MORE</button>
+
+                </div>
+
+            </div>
+        </div>
+        <div class="bodsub">
+            <h2>Lorem ipsum doit amet ffg dflkdklvs skmsfs;kn sdlknkn sdfflkn</h2>
+            <div class="subsubmenu">
+                <div class="subsub" style="margin-bottom: 12.5px;">
+                    <img src="images/seed.jpg">
+                    <div class="subsubsub">
+                        <h3>Lorem Ippusumm dolor</h3>
+                        <sub>By Deepesh.D</sub>
+                        <div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta sit nobis unde? Sit quam
+                            nece</div>
+                        <button>READ MORE</button>
+                    </div>
+                </div>
+                <div class="subsub" style="margin-bottom: 12.5px;">
+                    <img src="images/seed.jpg">
+                    <div class="subsubsub">
+                        <h3>Lorem Ippusumm dolor</h3>
+                        <sub>By Deepesh.D</sub>
+                        <div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta sit nobis unde? Sit quam
+                            nece</div>
+                        <button>READ MORE</button>
+                    </div>
+                </div>
+                <div class="subsub">
+                    <img src="images/seed.jpg">
+                    <div class="subsubsub">
+                        <h3>Lorem Ippusumm dolor</h3>
+                        <sub>By Deepesh.D</sub>
+                        <div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta sit nobis unde? Sit quam
+                            nece</div>
+                        <button>READ MORE</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    <h2 class="lwrbod padd">vada dolor ipppusumu sonor idiom</h2>
+    <div class="lwrbod padd">this is an amazing webpage designed to flex flex skills this is an amazing webpage designed
+        to flex flex skill</div>
+    <div class="padd lwrmain">
+        <div class="bodsub">
+            <div class="lwrmenu">
+                <img src="images/clover.jpg">
+                <div style="padding: 5px;">
+                    <div style="color: white;font-size: 15pt;">Lorem ipsum dolor, sit ame? Sit quam nece</div>
+                    <button
+                        style="background-color: rgba(128, 128, 128, 0); margin-top: 10px;border-color: white; color: white;">READ
+                        MORE</button>
+
+                </div>
+
+
+
+            </div>
+        </div>
+        <div class="bodsub">
+            <div class="lwrmenu">
+                <img src="images/clover.jpg">
+                <div style="padding: 5px;">
+                    <div style="color: white;font-size: 15pt;">Lorem ipsum dolor, sit ame? Sit quam nece</div>
+                    <button
+                        style="background-color: rgba(128, 128, 128, 0); margin-top: 10px;border-color: white; color: white;">READ
+                        MORE</button>
+
+                </div>
+
+
+
+            </div>
+        </div>
+    </div>
+    <div class="foot padd">
+        <div class="footsec1">
+            <h4>LOREM PSUM DOLOR</h4>
+            <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos ea accusamus, exercitationem delectus
+                enim, sunt ipsum vero, quas illo vitae maxime dolorum at neque placeat ex! Eum ratione vel commodi.
+            </div>
+
+        </div>
+        <div class="footsec2">
+            <h4>QUICK LINKS</h4>
+            <ul>
+                <li><a href="#">HOMEPAGE</a></li>
+                <li><a href="#">BLOG</a></li>
+                <li><a href="#">GALLERY</a></li>
+                <li><a href="#">CONTACT US</a></li>
+                <li><a href="#">LINKS</a></li>
+
+            </ul>
+
+
+        </div>
+        <div class="footsec3">
+            <h4>KEEP IN TOUCH</h4>
+            <form>
+                <input type="email" placeholder="ENTER YOUR EMAIL">
+                <input type="submit" style="color: white; background-color: yellowgreen;margin-top 10px;">
+            </form>
+            <div class="icon">
+                <a href="#"><img src="images/icons8-facebook-50.png" style="width: 30px;"></a>
+                <a href="#"><img src="images/icons8-instagram-50.png" style="width: 30px;"></a>
+                <a href="#"><img src="images/icons8-pinterest-50.png" style="width: 30px;"></a>
+                <a href="#"><img src="images/icons8-whatsapp-50.png" style="width: 30px;"></a>
+                <a href="#"><img src="images/icons8-youtube-50.png" style="width: 30px;"></a>
+            </div>
+
+        </div>
+    </div>
+
+
+</body>
+
+</html>
